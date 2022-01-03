@@ -21,10 +21,12 @@ import java.util.List;
 public class AdminRestController {
 
     private final UserService userService;
+    private final RoleService roleService;
 
     @Autowired
-    public AdminRestController(UserService userService) {
+    public AdminRestController(UserService userService,RoleService roleService) {
         this.userService = userService;
+        this.roleService = roleService;
     }
 
     @GetMapping("/users")

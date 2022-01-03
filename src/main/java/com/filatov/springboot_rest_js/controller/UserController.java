@@ -9,7 +9,7 @@ import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+
 
 
 
@@ -17,13 +17,14 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class UserController {
 
 
+    private final UserService userService;
     private final RoleService roleService;
 
     @Autowired
-    public UserController( RoleService roleService) {
+    public UserController(UserService userService, RoleService roleService) {
+        this.userService = userService;
         this.roleService = roleService;
     }
-
 
 
     @GetMapping(value = "/user")

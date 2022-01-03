@@ -6,7 +6,6 @@ import com.filatov.springboot_rest_js.service.RoleService;
 import com.filatov.springboot_rest_js.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-
 import javax.annotation.PostConstruct;
 import java.util.HashSet;
 import java.util.Set;
