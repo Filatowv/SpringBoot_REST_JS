@@ -1,45 +1,49 @@
 package com.filatov.springboot_rest_js.service;
 
+
+import com.filatov.springboot_rest_js.dao.RoleDao;
 import com.filatov.springboot_rest_js.model.Role;
-import com.filatov.springboot_rest_js.repository.RoleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
+
 @Service
+@Transactional
 public class RoleServiceImpl implements RoleService{
 
-    private RoleRepository roleRepository;
+
+    private final RoleDao roleDao;
 
     @Autowired
-    public RoleServiceImpl(RoleRepository roleRepository) {
-        this.roleRepository = roleRepository;
+    public RoleServiceImpl(RoleDao roleDao) {
+        this.roleDao = roleDao;
     }
 
     @Override
     public List<Role> getAllRole() {
-        return roleRepository.findAll();
+        return roleDao.getAllRole();
     }
 
     @Override
     public void addRole(Role role) {
-        roleRepository.save(role);
+        roleDao.addRole(role);
     }
 
     @Override
     public void updateRole(Role role) {
-        roleRepository.save(role);
+        roleDao.updateRole(role);
     }
 
     @Override
     public void deleteRole(long id) {
-        roleRepository.deleteById(id);
+        roleDao.deleteRole(id);
     }
 
     @Override
     public Role getRoleByName(String name) {
-        return roleRepository.findByName(name);
+        return roleDao.getRoleByName(name);
     }
 }

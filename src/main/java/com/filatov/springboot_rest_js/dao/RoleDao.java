@@ -1,11 +1,12 @@
-package com.filatov.springboot_rest_js.service;
+package com.filatov.springboot_rest_js.dao;
+
 
 import com.filatov.springboot_rest_js.model.Role;
 
 import java.util.List;
 
 
-public interface RoleService {
+public interface RoleDao {
 
     List<Role> getAllRole();
     void addRole(Role role);
