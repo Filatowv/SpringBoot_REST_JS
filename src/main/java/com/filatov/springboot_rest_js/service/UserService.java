@@ -1,8 +1,6 @@
 package com.filatov.springboot_rest_js.service;
 
 import com.filatov.springboot_rest_js.model.User;
-
-
 import java.util.List;
 
 public interface UserService {

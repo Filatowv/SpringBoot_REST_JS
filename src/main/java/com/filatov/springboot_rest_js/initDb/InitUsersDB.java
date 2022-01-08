@@ -45,7 +45,6 @@ public class InitUsersDB {
         user2.setRoles(roleUser);
 
 
-
         userService.addUser(user1);
         userService.addUser(user2);
     }

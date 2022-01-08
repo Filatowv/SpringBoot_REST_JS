@@ -2,8 +2,6 @@ package com.filatov.springboot_rest_js.service;
 
 import com.filatov.springboot_rest_js.model.Role;
 import org.springframework.stereotype.Service;
-
-
 import java.util.List;
 
 @Service
